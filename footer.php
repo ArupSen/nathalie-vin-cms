@@ -7,7 +7,8 @@
 </div><!--#main-->
 <?php wp_footer(); ?>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script src="slick.min.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/slick.min.js"></script>
+<script>
 // Site specific js code
 (function(){
   'use strict';
@@ -36,6 +37,17 @@
   });
   // add horizontal rules under nav elements
   jQuery('ul#navbar li').append('<hr>');
+  // page-template-works_details
+  // details page carousel works using the wordpress gallery
+  jQuery('.page-template-works_details #gallery-1').attr('id', 'carousel-nathalie');
+  jQuery('.page-template-works_details .gallery').addClass('carousel slide');
+  jQuery('.page-template-works_details .gallery').attr('data-ride', 'carousel');
+  jQuery('.page-template-works_details dl').addClass('item');
+  jQuery('.page-template-works_details dl').eq(0).addClass('active');
+  jQuery('.page-template-works_details .gallery').find('br').remove();
+  jQuery('.page-template-works_details .item').wrapAll('<div class="carousel-inner" role="listbox">');
+  jQuery('.page-template-works_details #page-content').find('style').remove();
 }());
+</script>
 </body>
 </html>

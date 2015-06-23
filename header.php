@@ -15,8 +15,13 @@ echo 'Tag Archive for &quot;'.$tag.'&quot; | '; bloginfo( 'name' );
       echo wp_title( ' | ', false, right ); bloginfo( 'name' );
     } ?></title>
   <meta name="description" content="<?php wp_title(); echo ' | '; bloginfo( 'description' ); ?>" />
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="<?php bloginfo( 'charset' ); ?>" />
   <meta name="generator" content="WordPress" />
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/da60e66c-bceb-417d-ac7e-387c37a1174d.css"/>
   <link rel="profile" href="http://gmpg.org/xfn/11" />
   <link rel="index" title="<?php bloginfo( 'name' ); ?>" href="<?php echo get_option('home'); ?>/" />
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />

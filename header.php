@@ -35,6 +35,7 @@ echo 'Tag Archive for &quot;'.$tag.'&quot; | '; bloginfo( 'name' );
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
   <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+  <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/slick.css" type="text/css" media="screen" charset="utf-8">
   <?php wp_head(); ?> <!-- this is used by many Wordpress features and for plugins to work proporly -->
 </head>
 
@@ -46,7 +47,7 @@ echo 'Tag Archive for &quot;'.$tag.'&quot; | '; bloginfo( 'name' );
       <?php if( is_front_page() || is_home() ) { ?>
         <h1><a href="<?php bloginfo('url'); ?>/" title="<?php bloginfo('description'); ?>"><?php bloginfo('name'); ?></a></h1>
       <?php } else { ?>
-        <h2><a href="<?php bloginfo('url'); ?>/" title="<?php bloginfo('description'); ?>"><?php bloginfo('name'); ?></a></h2>
+        <h1><a href="<?php bloginfo('url'); ?>/" title="<?php bloginfo('description'); ?>"><?php bloginfo('name'); ?></a></h1>
       <?php } ?>
       <p><?php bloginfo('description'); ?></p>
       <nav class="primary">

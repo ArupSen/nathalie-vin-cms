@@ -1,242 +1,441 @@
-@charset utf-8;
 /*
+ _____                         ___
+(  _  )                       (  _`\
+| (_) | _ __  _   _  _ _      | | ) |   __    ___ (_)   __    ___    ___
+|  _  |( '__)( ) ( )( '_`\    | | | ) /'__`\/',__)| | /'_ `\/' _ `\/',__)
+| | | || |   | (_) || (_) )   | |_) |(  ___/\__, \| |( (_) || ( ) |\__, \
+(_) (_)(_)   `\___/'| ,__/'   (____/'`\____)(____/(_)`\__  |(_) (_)(____/
+                    | |                              ( )_) |
+                    (_)                               \___/'
+
 Theme Name: Nathalie Vin CMS
 Theme URI: http://arupdesigns.co.uk
 Author: Arup Sen
 Author URI: http://arupdesigns.co.uk
 Description: Clone of Nathalie Vin 2015 website with CMS backend
 Version: 1.0
-
- */
-
-html,body,div,span,object,iframe,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,var,fieldset,form,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,dialog,figure,footer,header,hgroup,menu,nav,section,time,mark,audio,video{vertical-align:baseline;margin:0;padding:0}article,aside,dialog,figure,footer,header,hgroup,menu,nav,section,time,mark,audio,video {display:block}body{position:relative}textarea{border:1px solid #ccc;border-bottom-color:#eee;border-right-color:#eee;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;width:100%;margin:0;padding:.29em 0}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}:focus{outline:none}a{text-decoration:underline;border:0;-webkit-transition:color .3s linear;-o-transition:color .3s linear}a:hover,a:focus{text-decoration:none}a img{border:0}abbr,acronym{border-bottom:1px dotted;cursor:help;font-variant:small-caps}address,cite,em,i{font-style:italic}blockquote p{margin:0 1.5em 1.5em;padding:.75em}code,kbd,tt{font-family:"Courier New", Courier, monospace, serif;line-height:1.5}del{text-decoration:line-through}dfn{border-bottom:1px dashed;font-style:italic}dl{margin:0 0 1.5em}dd{margin-left:1.5em}h1,h2,h3,h4,h5,h6{font-weight:700;padding:0}h1{font-size:2em;margin:0 0 .75em}h2{font-size:1.5em;margin:0 0 1em}h3{font-size:1.1666em;margin:0 0 1.286em}h4{font-size:1em;margin:0 0 1.5em}h5{font-size:.8333em;margin:0 0 1.8em}h6{font-size:.666em;margin:0 0 2.25em}img{display:inline-block;vertical-align:text-bottom;border:0}ins{text-decoration:overline}mark{background-color:#ff9;color:#000;font-style:italic;font-weight:700}ol{list-style:outside decimal}p{font-weight:300;margin:0 0 1.5em}pre{font-family:"Courier New", Courier, monospace, serif;margin:0 0 1.5em}sub{top:.4em;font-size:.85em;line-height:1;position:relative;vertical-align:baseline}sup{font-size:.85em;line-height:1;position:relative;bottom:.5em;vertical-align:baseline}ul{list-style:outside disc}ul,ol{margin:0 0 1.5em 1.5em;padding:0}li ul,li ol{margin:0 0 1.5em 1.5em;padding:0}table{border-collapse:collapse;border-spacing:0;margin:0 0 1.5em;padding:0}caption{font-style:italic;text-align:left}tr.alt td{background:#eee}td{border:1px solid #000;vertical-align:middle;padding:.333em}th{font-weight:700;vertical-align:middle;padding:.333em}button{cursor:pointer;display:block;font-size:1em;height:2em;line-height:1.5em;margin:1.75em 0 0;padding:0 .5em}button::-moz-focus-inner{border:0}fieldset{border:0;position:relative;margin:0 0 1.5em;padding:1.5em 0 0}fieldset fieldset{clear:both;margin:0 0 1.5em;padding:0 0 0 1.5em}iput{border:1px solid #ccc;border-bottom-color:#eee;border-right-color:#eee;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;font-size:1em;height:1.5em;line-height:1.5em;width:100%;margin:0 0 .75em;padding:.29em 0}input[type=file]{height:2.25em;padding:0}select{border:1px solid #ccc;border-bottom-color:#eee;border-right-color:#eee;font-size:1em;height:2.25em;_margin:0 0 1.3em;margin:0 0 .8em;padding:.2em 0 0}optgroup{font-weight:700;font-style:normal;text-indent:.2em}optgroup + optgroup{margin-top:1em}option{font-size:1em;height:1.5em;text-indent:1em;padding:0}label{cursor:pointer;display:block;height:auto;line-height:1.4em;width:100%;margin:0;padding:0}label input{background:0;border:0;height:1.5em;line-height:1.5em;width:auto;margin:0 .5em 0 0;padding:0}legend{font-size:1.1666em;font-weight:700;left:0;margin:0;padding:0}dt,strong,b{font-weight:700}
-
-
-/*
-List of divs in Whiteboard
-Note that this list does not include the dynamically generated ids and classes, such as the body classes, the post ids, etc
 */
 
+html, body, div, span,
+applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dd, dl, dt, li, ol, ul,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  text-align: left;
+  vertical-align: baseline;
+}
+a img, :link img, :visited img {border: 0;}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;}
+ol, ul {list-style: none;}
+q:before, q:after,
+blockquote:before, blockquote:after {
+content: "";}
+
+/* COLOUR PALETTE
+
+#F0EFEF - main background colour
+#B0B0B0 - medium grey
+#666666 - darker grey
+#B31E00 - red
+#006276 - blue
+
+*/
+
+/* BG IMAGE PATH url('../images/my_image.gif') */
+/*the main global rules*/
 body{
-	background: #fff;
-	color: #000;
-	font: 75%/1.5em Helvetica Neue, Helvetica, Trebuchet MS, Arial, Verdana, Tahoma, "DejaVu Sans", "Liberation sans", "Bitstream Vera Sans", sans-serif;
+  font-family:Arial, sans-serif;
+  font-size:100.01%;
+  position:relative;
+  margin:0 auto;
+  background: /*url('../images/nathalie_grid.png') no-repeat 50% 0*/ #F0EFEF;
+}
+div#wrap{}
+
+
+/*grouped selectors - good for position:absolute and relative*/
+
+
+/*main heading and sub heading*/
+h1 {
+  background: url('/images/web-logo.png') no-repeat;
+  height: 47px;
+  width: 341px;
+  font-size: 0;
+  margin: 37px auto 7px;
 }
 
-#main {
-
-}
-.container {
-	width: 960px; margin: 0 auto;
-}
-
-#if-logged-in {
-	height: 20px;
-	line-height: 20px;
-	background: #111;
-	color: #eee;
-	font-size: 11px;
-}
-	#if-logged-in p {
-		margin: 0;
-	}
-	#if-logged-in a:link,
-	#if-logged-in a:visited {
-		color: #fff;
-		text-decoration: none;
-		margin: 0px 15px;
-	}
-	#if-logged-in a:hover {
-		text-decoration: underline;
-	}
-	#if-logged-in a:active {
-		text-decoration: underline;
-		margin-bottom: -1px;
-	}
-
-header {
-	
-}
-	nav {
-		
-	}
-	nav.primary {
-		
-	}
-	nav.footer {
-		
-	}
-	#widget-header {
-		
-	}
-	#widget-alert {
-		
-	}
-
-#content {
-	
-}
-	article {
-		
-	}
-		.featured-thumbnail {
-			
-		}
-		.post-content {
-			
-		}
-			.pagination {
-				
-			}
-	.post-meta {
-		
-	}
-	.post-navigation {
-		
-	}
-
-#comments {
-	
-}
-	li.comment {
-		
-	}
-		.odd {
-			
-		}
-		.even {
-			
-		}
-		.author-comment {
-			
-		}
-		.comment-text {
-			
-		}
-		.comment-meta {
-			
-		}
-			p.gravatar {
-				
-			}
-		.waiting-for-approval {
-			
-		}
-	#trackbacks {
-		
-	}
-		li.trackback {
-			
-		}
-	p#no-comments {
-		
-	}
-	#comments-form {
-		
-	}
-		#respond {
-			
-		}
-		.cancel-comment-reply {
-			
-		}
-
-.page {
-	
-}
-	#page-content {
-		
-	}
-	#page-meta {
-		
-	}
-
-.post {
-	
-}
-	.postContent {
-		
-	}
-	.post-excerpt {
-		
-	}
-
-nav.oldernewer {
-	
-}
-	.older {
-		
-	}
-	.newer {
-		
-	}
-
-.search {
-	
+/*content area*/
+div#contents{
+  margin-top:1em;
+  height: 1%;
 }
 
-.author {
-	
+/*main navbar*/
+ul#navbar{
+  width: 65%;
+  margin: 0 auto;
 }
-#recent-author-posts {
-	
+ul#navbar li{}
+
+div#clear {clear:left;}
+ul#navbar li a{
+  text-decoration:none;
+  color:#d9b613;
+  text-transform: capitalize;
+  padding-bottom: 7px;
 }
-#recent-author-comments {
-	
+/*
+ul#navbar li a:hover {
+  border-bottom: 1px solid #d9b613;
+  margin-bottom: -1px;
+}
+*/
+#navbar hr {
+  width: auto;
+  margin: 0;
+  border-top: 1px solid transparent;
+  position: relative;
+}
+.nav>li>a {
+  display: inline-block;
+  padding: 0 15px 0 0;
+}
+#nav-home hr {
+  width: 51px;
+}
+#nav-works hr {
+  width: 60px;
+}
+#nav-works li.fine-art hr {
+  width: 65px;
+}
+#nav-works li.commissions hr {
+  width: 103px;
+}
+#nav-about hr {
+  width: 54px;
+}
+#nav-about li.about-nathalie hr {
+  width: 124px;
+}
+#nav-about li.qanda hr {
+  width: 42px;
+}
+#nav-shop hr {
+  width: 44px;
+}
+#nav-contact hr {
+  width: 80px;
+}
+#nav-exhibitions hr {
+  width: 103px;
+}
+#navbar li:hover hr {
+  border-top:1px solid #d9b613;
+}
+.nav>li>a:hover, .nav>li>a:focus {
+  background-color: transparent;
+}
+.caret {
+  color: inherit;
+  left: initial;
+  visibility: hidden;
+}
+#nav-works .dropdown-menu li a, #nav-about .dropdown-menu li a {
+  background: none;
+  padding: 9px 0 0px 20px;
+}
+.dropdown-menu {
+  border-radius: 0;
+  margin-top: -2px;
+  padding-bottom: 10px;
+}
+.dropdown-menu li hr {
+  visibility: hidden;
+}
+.dropdown-menu li:hover hr {
+  visibility: visible;
+}
+#nav-works .dropdown-menu li hr, #nav-about .dropdown-menu li hr {
+  left: 20px;
+}
+#nav-home a, #nav-about a, #nav-shop a {
+  background: url('../images/up_arrow.png') no-repeat 100% 40%;
+}
+#nav-contact a {
+  background: url('../images/down_arrow.png') no-repeat 100% 40%;
+}
+#nav-exhibitions a {
+  background: url('../images/down_arrow.png') no-repeat 100% 40%;
+}
+#nav-works a {
+  background: url('../images/down_arrow.png') no-repeat 77% 40%;
+}
+/* home page */
+#home-carousel img {
+  border: 4px solid #fff;
+}
+.slick-prev, .slick-next {
+  background-color: rgba(255, 255, 255, 0.7);
+  display: block;
+  height: 488px;
+  width: 50%;
+  top: 0;
+  position: absolute;
+  border: none;
+  outline: none;
+}
+.slick-prev:hover, .slick-next:hover {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+.slick-prev {
+  left: -402px;
+}
+.slick-next {
+  right: -403px;
+}
+.slick-prev span, .slick-next span, .left span, .right span {
+ /* background: rgba(0,0,0,.1);*/
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  height: 60px;
+  width: 42px;
+  font-size: 36px;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  line-height: 60px;
+  margin-top: -30px;
+}
+.slick-prev span {
+  right: 0;
+}
+.index .social-icons a {
+  color:#dbb74a;
+}
+/* works pages - commissions and fine art */
+a.thumbnail span {
+  display: none;
+  position: absolute;
+  top: 46%;
+  text-transform: uppercase;
+  text-align: center;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  color: #666;
+}
+a.thumbnail {
+  border: none;
+  padding: 15px;
+  margin: 0;
+  background-color: transparent;
+}
+/* description pages with slideshow */
+.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+  margin: 0 auto;
+}
+div#carousel-nathalie {
+  margin: 0 auto;
+  width: 820px;
+  min-height: 510px;
+}
+div#carousel-nathalie {
+  width: auto;
+  max-width: 1100px;
+}
+.description h2, .description h3, .description p {
+  text-align: center;
+  color: #999;
+}
+.description h2 {
+  font-size: 1.8em;
+  letter-spacing: 1px;
+  padding:1em;
+}
+.description h3 {
+  margin-bottom: 30px;
+}
+.description p {
+  margin: 10px auto;
+  width: 40%;
+  font-size: 13px;
+  text-align: justify;
+  font-family: "Times New Roman";
+}
+a.carousel-control span {
+  top: 45%;
+  position: absolute;
+  text-align: center;
+}
+.carousel-control.left, .carousel-control.right {
+  background: none;
+  top: 45px;
+}
+.carousel-control.left {
+  left: -110px;
+}
+.carousel-control.right {
+  right: -100px;
+}
+a span.fa-caret-left {
+  -webkit-transform: rotate(-45deg);
+}
+a span.fa-caret-right {
+  -webkit-transform: rotate(45deg);
+}
+/* exhibitions page */
+img.banner {
+  margin: 0 auto;
+}
+.dates ul {
+  margin: 0 auto;
+  max-width: 941px;
+}
+.dates li {
+  width: 310px;
+  float: left;
+  text-align: center;
+  padding: 30px;
+  height: 140px;
+  font-size: 13px;
+  font-family: "Times New Roman";
+  color: #999;
+  letter-spacing: 1px;
+}
+.dates h3, .contact-info h3 {
+  font-size: 12px;
+  margin-bottom: 0.5em;
+  color: #666;
+  letter-spacing: 0;
+}
+.exhibitions hr {
+  border-top: 1px solid #999;
+  width: 120px;
+  margin-top: 10px;
+}
+.exhibitions h2 {
+  color: #999;
+  margin-top: 1em;
+}
+.exhibitions h2, .exhibitions h3 {
+  text-align: center;
+}
+/* about page */
+.about h2 {
+  color: #999;
+  text-align: center;
+  margin-top: 1em;
+}
+.about hr {
+  border-top: 1px solid #999;
+  width: 65px;
+  margin-top: 10px;
+}
+.about .row {
+  margin: 0 auto;
+  width: 940px;
+}
+.about .row .col-md-4 {
+  color: #999;
+  font-family: "Times New Roman";
+}
+.about .row .col-md-4 p {
+  text-align: justify;
+  margin-bottom: 1em;
+  font-size: 13px;
+}
+.col-1 {
+  padding-left: 0;
+}
+.col-2 {
+  padding-left:10px;
+  padding-right:10px;
+}
+.col-3 {
+  padding-right: 0;
+}
+.col-3 a {
+  color: #999;
+}
+/* contact page */
+
+.contact h2 {
+  color: #999;
+  text-align: center;
+}
+.contact hr {
+  border-top: 1px solid #999;
+  width: 96px;
+  margin-top: 10px;
+}
+.contact-info {
+  position: relative;
+  top: -260px;
+  font-size: 13px;
+  text-align: center;
+  color: #999;
+  font-family: "Times New Roman";
+  letter-spacing: 1px;
+}
+.contact-info h2 {
+  font-size: 16px;
+}
+.contact-info h3 {
+  text-align: center;
+}
+span.mobile {
+  margin-left: 21px;
+}
+span.work {
+  margin-left: 29px;
+}
+span.email {
+  margin-left: 96px;
+}
+.contact-info a {
+  color: #999;
+  padding-right: 3px;
+}
+.social-icons {
+  margin: 10px auto;
+  width: 100px;
+}
+.social-icons i {
+  font-size: 20px;
 }
 
-#error404 {
-	
+/* small screens */
+@media (max-width: 767px) {
 }
+/*all the Safari stuff together*/
+@media screen and (-webkit-min-device-pixel-ratio:0){
+/*global rules*/
+  div#wrap{}/*safari rule*/
 
-#sidebar {
-	
-}
-	#widget-sidebar {
-		
-	}
-		#sidebar-search {
-			
-		}
-		#sidebar-nav {
-			
-		}
-		#sidebar-archives {
-			
-		}
-		#sidebar-meta {
-			
-		}
-		.widget {
-			
-		}
+/*navbar*/
+  ul#navbar{}
+  ul#navbar li {}
 
-#footer {
-	
-}
-	#widget-footer {
-		
-	}
-	#footer-nav {
-		
-	}
-	
-.no-results {
-	
-}
 
-.widget-area {
-	
-}
 
-.right {
-	float: right;
+/*content area*/
+  div#contents{}
+  div#contents p{}
 }
-.left {
-	float: left;
-}
-.clear {
-	clear: both;
-}
-
-/* Always remember to compress your live stylesheet and keep an uncompressed backup */

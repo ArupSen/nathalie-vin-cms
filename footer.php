@@ -12,6 +12,12 @@
 // Site specific js code
 (function(){
   'use strict';
+  // page-template-homepage_template
+  // slick carousel on the home page
+  jQuery('.page-template-homepage_template #gallery-1').attr('id', 'home-carousel');
+  jQuery('.page-template-homepage_template .gallery-item').addClass('slide');
+  jQuery('.page-template-homepage_template #page-content').find('style').remove();
+  jQuery('.page-template-homepage_template .gallery').find('br').remove();
   // carousel on the home page uses slick
   jQuery('#home-carousel').slick({
     centerMode: true,
